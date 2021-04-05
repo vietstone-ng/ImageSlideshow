@@ -74,12 +74,12 @@ open class FullScreenSlideshowViewController: UIViewController {
         view.addSubview(slideshow)
 
         // close button configuration
-        closeButton.setImage(UIImage(named: "ic_cross_white", in: .module, compatibleWith: nil), for: UIControlState())
+      closeButton.setImage(UIImage(named: "ic_cross_white", in: .module, compatibleWith: nil), for: UIControlState())
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControlEvents.touchUpInside)
         view.addSubview(closeButton)
       
       // save button
-      saveButton.setImage(UIImage(named: "icon8-download", in: .module, compatibleWith: nil), for: UIControlState())
+      saveButton.setImage(UIImage(named: "icons8-download", in: .module, compatibleWith: nil), for: UIControlState())
       saveButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.saveToDevice), for: UIControlEvents.touchUpInside)
       view.addSubview(saveButton)
     }
@@ -117,7 +117,7 @@ open class FullScreenSlideshowViewController: UIViewController {
 
             closeButton.frame = closeButtonFrame ?? CGRect(x: max(10, safeAreaInsets.left), y: max(10, safeAreaInsets.top), width: 40, height: 40)
           
-          let saveX = self.view.bounds.size.width - max(10, safeAreaInsets.right) - 40
+          let saveX = view.bounds.size.width - max(10, safeAreaInsets.right) - 40
           saveButton.frame = CGRect(x: saveX, y: max(10, safeAreaInsets.top), width: 40, height: 40)
         }
 
